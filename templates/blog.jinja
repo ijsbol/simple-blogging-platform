@@ -1,0 +1,18 @@
+{% extends 'base.jinja' %}
+
+{% block base_head %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="authors">
+        {% for author in blog.meta.authors %}
+            <div class="author">
+                <img class="avatar" src="{{ author.avatar }}"/>
+                <span class="name">{{ author.display }}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    {{ blog.html | safe }}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.jinja' %}
+
+{% block base_head %}
+
+{% endblock %}
+
+{% block body %}
+    <h1>Blogs</h1>
+    <div class="dropdown">
+        <ul>
+            {% for blog in blogs %}
+                <li><a href="blog/{{ blog.slug }}" target="_blank">{{ blog.meta.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
